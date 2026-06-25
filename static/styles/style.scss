@@ -357,3 +357,40 @@ nav ul li a.active::after {
 .card-link:hover {
     opacity: 0.8;
 }
+
+.social-links {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+
+    color: var(--text-colour);
+    background-color: var(--nav-bg-colour);
+    border: 1px solid rgba(150, 150, 150, 0.2);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+}
+
+.social-btn:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-colour);
+    color: var(--accent-colour);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.social-btn i {
+    font-size: 1.25rem;
+    transition: transform 0.2s ease;
+}
