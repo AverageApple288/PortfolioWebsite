@@ -9,9 +9,6 @@
         <li>
             <a href="{{ url_for('about') }}" class="{% if request.endpoint == 'about' %}active{% endif %}">About me</a>
         </li>
-        <li>
-            <a href="{{ url_for('contact') }}" class="{% if request.endpoint == 'contact' %}active{% endif %}">Contact</a>
-        </li>
     </ul>
 
     <button id="theme-toggle" class="theme-btn">

@@ -10,8 +10,88 @@
         {% include 'navbar.html' %}
 
         <main class="page-container">
-            <h1>Welcome to my portfolio!</h1>
-            <p>Visit the projects tab to see some of the projects I have worked on, the about page for more information about myself and the contact tab for my contact details and social media links.</p>
+            <section>
+                <h1>Welcome to my portfolio!</h1>
+                <p>Hi, I'm Fabian, a computer science student studying in my second year at the University of St Andrews.</p>
+            </section>
+
+            <section class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">Languages</h3>
+                    <div class="skill-cluster">
+                        <span class="tech-pill">Java</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">C++</span>
+                        <span class="tech-pill">HTML/CSS</span>
+                        <span class="tech-pill">JavaScript/TypeScript</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">Bash</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">Toolkits</h3>
+                    <div class="skill-cluster">
+                        <span class="tech-pill">Linux</span>
+                        <span class="tech-pill">Git</span>
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">ROS</span>
+                        <span class="tech-pill">Flask</span>
+                        <span class="tech-pill">Java Swing</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="featured-projects-section">
+                <h3 class="section-title">FEATURED PROJECTS</h3>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h4>First Tech Challenge</h4>
+                            <p>During my fifth and sixth years of high school I was part of my school's First Tech Challenge Robotics team and during this time I programmed some of the robot's tele-op (manual) phase and most of the autonomous phase. Due to the unusual development environment used by FTC the code was actually small alterations to the Android app that ran on the driver hub, meaning I got experience using Android Studio and Java development.</p>
+                            <p>My largest contributions to the codebase were writing the logic for the omni-directional movement of the robot using mecanum wheels and implementing an advanced autonomous phase using the library Roadrunner. This allowed for programming the robot to move to certain coordinates on the game field by utilising dead-reckoning using the wheel movements and IMU data to precisely track the robot's location even it collided with something.</p>
+                            <div class="card-tech">
+                                <span class="tech-pill mini">Java</span>
+                                <span class="tech-pill mini">Git</span>
+                            </div>
+                        </div>
+                        <a href="/projects" class="card-link">View Details &rarr;</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h4>Turing Machine Simulator</h4>
+                            <p>Completed as my Advanced Higher Project in my sixth year of high school I created a Python Flask website that can take in Turing Machine instructions from a user and will then display a visualisation of the tape where you can go through the resulting Turing Machine program step by step. I decided to do this as my project as I had recently taken an interest in Turing Machines and Busy Beaver programs, however, I felt that there was a lack of quality websites that would allow you to visualise exactly what was happening step by step as these programs ran and wanted to create my own version which could meet this use case.</p>
+                            <p>The project taught me a lot about writing programs more efficiently as the computation to compute and more crucially store a Turing Machine program turned out to be greater than expected, with 1000-step programs initially taking minutes to compute, forcing me to find a better way of doing things. I also greatly improved my skills creating quality websites in HTML/CSS being the most complicated interface I have created to date, and got far better at writing JavaScript frontend code, which turned out to be more challenging than expected due to the necessity of iterating between steps of a Turing Machine on the client side to allow users to spam the button.</p>
+                            <div class="card-tech">
+                                <span class="tech-pill mini">Python</span>
+                                <span class="tech-pill mini">HTML/CSS</span>
+                                <span class="tech-pill mini">JavaScript</span>
+                                <span class="tech-pill mini">SQL</span>
+                                <span class="tech-pill mini">Flask</span>
+                            </div>
+                        </div>
+                        <a href="/projects" class="card-link">View Details &rarr;</a>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="card-content">
+                            <h4>Formula Student AI</h4>
+                            <p>During my term time at university I have been a part of the St Andrews Formula Student AI team. Our goal is to program an autonomous car to go around a track denoted with yellow and blue cones using data from a lidar sensor and colour camera. I have mostly worked on the control and planning section of the project, programming the logic for that takes in the cone positions outputted by the perception pipeline and turns that into instructions for the speed and direction of each of the car's wheels.</p>
+                            <p>As the team was only just starting when I joined, I got the opportunity to start at the beginning with the codebase and design my section largely from scratch. The code for this that I have developed currently uses the Delaunay triangulation algorithm to create a mesh of the track which is then used to find the midpoints of each of the cones in the track. These midpoints are then passed to an implementation of the Pure Pursuit algorithm with a dynamic lookahead distance.</p>
+                            <div class="card-tech">
+                                <span class="tech-pill mini">C++</span>
+                                <span class="tech-pill mini">ROS</span>
+                                <span class="tech-pill mini">Linux</span>
+                                <span class="tech-pill mini">Docker</span>
+                                <span class="tech-pill mini">Git</span>
+                            </div>
+                        </div>
+                        <a href="/projects" class="card-link">View Details &rarr;</a>
+                    </div>
+                </div>
+            </section>
         </main>
     </body>
 </html>

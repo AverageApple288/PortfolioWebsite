@@ -231,3 +231,129 @@ nav ul li a.active::after {
     cursor: not-allowed;
     transform: none;
 }
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin: 24px 0;
+}
+
+.category-title {
+    font-size: 1rem;
+    color: var(--text-colour);
+    opacity: 0.8;
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.skill-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tech-pill {
+    font-family: var(--font-mono), monospace;
+    font-size: 0.85rem;
+    padding: 8px 18px;
+    border-radius: 50px;
+    color: var(--text-colour);
+
+    background-color: var(--nav-bg-colour);
+    border: 1px solid rgba(150, 150, 150, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+    cursor: default;
+}
+
+.tech-pill:hover {
+    transform: translateY(-2px);
+    border-color: var(--accent-colour);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+    font-size: 0.9rem;
+    color: var(--text-colour);
+    opacity: 0.7;
+    margin: 40px 0 16px 0;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: rgba(150, 150, 150, 0.05);
+    border: 1px solid rgba(150, 150, 150, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent-colour);
+}
+
+.project-card h4 {
+    margin: 0 0 12px 0;
+    color: var(--text-colour);
+    font-size: 1.1rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: var(--text-colour);
+    opacity: 0.85;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-tech {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+}
+
+.tech-pill.mini {
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background-color: transparent;
+    border: 1px solid rgba(150, 150, 150, 0.3);
+}
+
+.card-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent-colour);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.card-link:hover {
+    opacity: 0.8;
+}
