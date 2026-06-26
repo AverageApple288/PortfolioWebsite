@@ -2,16 +2,40 @@ from flask import Flask, render_template
 from flask_talisman import Talisman
 
 app = Flask(__name__)
-Talisman(app, force_https=False)
+
+csp = {
+    'default-src': [
+        '\'self\''
+    ],
+    'style-src': [
+        '\'self\'',
+        'fonts.googleapis.com',
+        'cdnjs.cloudflare.com',
+        '\'unsafe-inline\''
+    ],
+    'font-src': [
+        '\'self\'',
+        'fonts.gstatic.com',
+        'cdnjs.cloudflare.com'
+    ],
+    'script-src': [
+        '\'self\''
+    ],
+    'img-src': [
+        '\'self\'',
+        'data:'
+    ]
+}
+
+Talisman(app, force_https=False, content_security_policy=csp)
 
 @app.route('/')
-def home():  # put application's code here
+def home():
     return render_template('index.html')
 
 @app.route('/projects')
 def projects():
     return render_template('projects.html')
-
 
 @app.route('/about')
 def about():
