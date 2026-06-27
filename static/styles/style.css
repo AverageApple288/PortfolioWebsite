@@ -107,7 +107,7 @@ nav ul li a.active::after {
   justify-content: center;
   position: absolute;
   top: 16px;
-  right: 16px;
+  right: 1%;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 
