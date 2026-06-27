@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from flask_talisman import Talisman
 from werkzeug.middleware.proxy_fix import ProxyFix
 
@@ -44,6 +44,10 @@ def projects():
 @app.route('/about')
 def about():
     return render_template('about.html')
+
+@app.route('/sitemap.xml')
+def sitemap():
+    return send_from_directory('static', 'sitemap.xml')
 
 if __name__ == '__main__':
     app.run()
